@@ -36,7 +36,7 @@ app.get('/users/:id', (req, res) => {
 
 // GET - PUG
 app.get('/pug', (req, res) => {
-    res.render('index', { title: 'Hey', message: 'Hello there!' })
+    res.render('index', { title: 'Tamer', message: 'Hello there!' })
 })
 
 
