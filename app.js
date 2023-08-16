@@ -6,6 +6,7 @@ const port = process.env.PORT || 8080
 const users = require('./users')
 
 // app.use()
+// https://expressjs.com/en/guide/using-template-engines.html
 app.set('view engine', 'pug')
 
 // ALL REQUESTS TO ENDPOINT "/"
@@ -35,13 +36,9 @@ app.get('/users/:id', (req, res) => {
 })
 
 // GET - PUG
+// WORKS AS A VIEW ENGINE FOR HTML FORMAT
 app.get('/pug', (req, res) => {
     res.render('index', { title: 'Tamer', message: 'Hello there!' })
-})
-
-
-app.get('/christoph', (req, res) => {
-  res.send('Hello Christoph!')
 })
 
 app.listen(port, () => {
