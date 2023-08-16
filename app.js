@@ -7,9 +7,11 @@ const users = require('./users')
 
 // app.use()
 // https://expressjs.com/en/guide/using-template-engines.html
+// https://expressjs.com/en/guide/using-middleware.html
 app.set('view engine', 'pug')
 
 // ALL REQUESTS TO ENDPOINT "/"
+// http://expressjs.com/en/5x/api.html#app.route
 app.route('/')
 .all((req, res, next) => {
     console.log("METHOD: "+req.method)
